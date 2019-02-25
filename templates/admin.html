@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="placeholder"></div>
+<script>
+    $(function(){
+       $.get('list').then(function(data){
+           data.forEach(function(c){
+              $("#placeholder").append(  $("<div>").css("boder","1px solid #000000").append( $("<p>").text(c.body)));
+
+           })
+       })
+    });
+
+</script>
+
+
+
+</body>
+</html>
